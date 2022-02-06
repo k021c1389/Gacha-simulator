@@ -1,0 +1,26 @@
+<div class="row">
+  <h1>ガチャシミュレーター</h1>
+  <p>使用方法： 「1回引く」　「11連ガチャを引く」 「全てのSR+が出るまで引く」のどれかをクリックしてください。</p>
+</div>
+  
+<hr />
+<form action="/" method="POST">
+  <div class="row">
+    <div class="col">
+      <input type="submit" class="btn btn-success btn-lg btn-block" name="submit" formaction="/gacha-one" value="1回引く">
+    </div>
+    <div class="col">
+      <input type="submit" class="btn btn-success btn-lg btn-block" name="submit" formaction="/gacha-eleven" value="11連ガチャを引く">
+    </div>
+    <div class="col">
+      <input type="submit" class="btn btn-success btn-lg btn-block" name="submit" formaction="/srplus-endless-1" value="全てのSR+が出るまで引く(1回)">
+    </div>
+    <div class="col">
+      <input type="submit" class="btn btn-success btn-lg btn-block" name="submit" formaction="/srplus-endless-11" value="全てのSR+が出るまで引く(11連)">
+    </div>
+    <div class="col">
+      <input type="submit" class="btn btn-danger btn-lg btn-block"   name="submit" formaction="reset" value="リセット">
+    </div>
+  </div>
+</form>
+<hr />

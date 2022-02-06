@@ -1,0 +1,12 @@
+
+<div class="row row-cols-6">
+{% for gacha_result in gacha_results %}
+<div class="col">
+  <img src="/static/images/{{gacha_result['rarity']}}/{{gacha_result['item']}}.jpg" class="img-thumbnail" width="150" height="200" />
+  <ul>
+    <li>レアリティ: {{gacha_result['rarity']}}</li>
+    <li>アイテム番号: {{gacha_result['item']}}</li>
+  </ul>
+</div>
+{% endfor %}
+</div>

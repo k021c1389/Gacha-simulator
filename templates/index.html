@@ -1,0 +1,23 @@
+{% extends "application.html" %}
+
+{% block content %}
+
+{% include "_header.html" %}
+
+{% with result=result %}
+{% include "_ruikei.html" %}
+{% endwith %}
+
+{% with gacha_rireki=result.gacha_rireki %}
+{% include "_gacha_rireki.html" %}
+{% endwith %}
+
+<h2>今回のガチャ結果</h2>
+{% if gacha_results %}
+{% with gacha_results=gacha_results %}
+{% include "_gacha_results.html" %}
+{% endwith %}
+{% endif %}
+
+{% endblock %}
+<hr />

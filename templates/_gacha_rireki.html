@@ -1,0 +1,59 @@
+<h2>ガチャの履歴</h2>
+<table class="table table-bordered">
+  <tr>
+    <th scope="col">ノーマル</th>
+    <th scope="col">ノーマル+</th>
+    <th scope="col">レア</th>
+    <th scope="col">レア+</th>
+  </tr>
+  <tr>
+    <td>{{gacha_rireki["N"] | length}}体</td>
+    <td>{{gacha_rireki["N+"] | length}}体</td>
+    <td>{{gacha_rireki["R"] | length}}体</td>
+    <td>{{gacha_rireki["R+"] | length}}体</td>
+  </tr>
+</table>
+
+<hr />
+
+<h4>Sレア結果</h4>
+<h5>重複なし{{gacha_rireki["SR"]|unique|list|length}}/10体</h5>
+<h5>総数{{gacha_rireki["SR"]|length}}体</h5>
+
+{% if gacha_rireki["SR"] %}
+  <div class="row row-cols-6">
+    {% for item in gacha_rireki["SR"]|unique|list|sort %}
+    <div class="col">
+      <img src="/static/images/SR/{{item}}.jpg" class="img-thumbnail" width="150" height="200" />
+      <ul>
+        <li>アイテム番号: {{item}}</li>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+{% else %}
+<p>現在、Sレアは1体も出ていません</p>
+{% endif %}
+<hr />
+
+
+<h4>Sレアプラス結果</h4>
+<h5>重複なし{{gacha_rireki["SR+"]|unique|list|length}}/10体</h5>
+<h5>総数{{gacha_rireki["SR+"]|length}}体</h5>
+
+{% if gacha_rireki["SR+"] %}
+  <div class="row row-cols-6">
+    {% for item in gacha_rireki["SR+"]|unique|list|sort %}
+    <div class="col">
+      <img src="/static/images/SR+/{{item}}.jpg" class="img-thumbnail" width="150" height="200" />
+      <ul>
+        <li>アイテム番号: {{item}}</li>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+{% else %}
+<p>現在、Sレアプラスは1体も出ていません</p>
+{% endif %}
+<hr />
+
